@@ -11,6 +11,10 @@ const transporter = nodemailer.createTransport({
         refreshToken: process.env.REFRESH_TOKEN,
         // pass: process.env.EMAIL_APP_PASSWORD,
     },
+    // Add these 3 lines 👇
+    host: 'smtp.gmail.com',
+    port: 465,
+    family: 4,   // force IPv4
 });
 
 // Verify the connection configuration
